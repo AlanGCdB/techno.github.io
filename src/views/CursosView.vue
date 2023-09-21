@@ -5,7 +5,7 @@
     </div>
     <transition mode="out-in">
       <div v-if="api" class="conteudo">
-        <div>
+        <div class="dtCuros">
           <h1>{{ api.titulo }}</h1>
           <p>{{ api.descricao }}</p>
         </div>
@@ -39,4 +39,7 @@ export default {
 };
 </script>
 <style>
+.dtCuros {
+  border-right: 1px solid rgba(0, 0, 0, 0.116);
+}
 </style>

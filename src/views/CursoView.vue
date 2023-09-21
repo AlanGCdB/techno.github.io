@@ -10,9 +10,16 @@
           <p>{{ api.descricao }}</p>
           <h2>Aulas</h2>
           <ul class="aulas">
-            <li v-for="aulas in api.aulas" :key="aulas.id">{{ aulas.nome }}</li>
+            <li v-for="aula in api.aulas" :key="aula.id">
+              <router-link
+                :to="{ name: 'AulaView', params: { aula: aula.id } }"
+              >
+                {{ aula.nome }}
+              </router-link>
+            </li>
           </ul>
         </div>
+        <router-view></router-view>
       </div>
     </transition>
   </div>
@@ -33,12 +40,16 @@ export default {
 </script>
 
 <style scoped>
-.aulas li {
+.aulas li a {
   display: block;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.137);
   background: white;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 4px;
+}
+.aulas li a.router-link-active {
+  background: #4b8;
+  color: white;
 }
 </style>
