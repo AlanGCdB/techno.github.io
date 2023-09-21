@@ -6,7 +6,12 @@
     <transition mode="out-in">
       <div v-if="api">
         <h1>{{ api.titulo }}</h1>
-        <p>{{ api }}</p>
+        <p>{{ api.descricao }}</p>
+        <ul>
+          <li v-for="(value, index) in api.contato" :key="value.id">
+            <b>{{ index }}:</b> {{ value }}
+          </li>
+        </ul>
       </div>
     </transition>
   </div>
@@ -22,3 +27,5 @@ export default {
   },
 };
 </script>
+<style>
+</style>

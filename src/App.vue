@@ -18,6 +18,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   color: #234;
@@ -40,6 +41,13 @@ a.router-link-active {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+.container h1,
+.container h2,
+.container h3,
+.container p,
+.container li {
+  margin: 15px auto;
 }
 .v-enter {
   opacity: 0;

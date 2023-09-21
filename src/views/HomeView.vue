@@ -14,11 +14,15 @@
             :to="{ name: 'CursosView' }"
             >Cursos</router-link
           >
-          <div>
+          <div class="avaliacao">
             <h2>Avaliações</h2>
             <ul>
-              <li v-for="avaliacao in api.avaliacoes" :key="avaliacao.nome">
-                <p>{{ avaliacao.nome }}</p>
+              <li
+                v-for="avaliacao in api.avaliacoes"
+                :key="avaliacao.nome"
+                class="avaliacaoLi"
+              >
+                <p class="nome">{{ avaliacao.nome }}</p>
                 <p>{{ avaliacao.descricao }}</p>
               </li>
             </ul>
@@ -50,9 +54,6 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  margin-top: 15px;
-}
 .btn-cursos {
   border: none;
   background: #4b8;
@@ -65,5 +66,14 @@ export default {
   margin-bottom: 40px;
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
   font-family: "Avenir", Helvetica, Arial, sans-serif;
+}
+.nome {
+  font-weight: bold;
+}
+.avaliacao {
+  width: 400px;
+}
+.avaliacaoLi {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.137);
 }
 </style>

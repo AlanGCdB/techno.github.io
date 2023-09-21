@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ContatoView from "../views/ContatoView.vue";
 import CursosView from "../views/CursosView.vue";
+import CursoView from "../views/CursoView.vue";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,12 @@ const router = new VueRouter({
       path: "/cursos",
       name: "CursosView",
       component: CursosView,
+    },
+    {
+      path: "/cursos/:curso",
+      name: "CursoView",
+      component: CursoView,
+      props: true,
     },
   ],
 });
